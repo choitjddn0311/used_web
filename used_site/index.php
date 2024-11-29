@@ -26,6 +26,12 @@
             </div>
         </div>
     </header>
-    
+    <main>
+        <div class="item_container">
+            <div class="item_inner">
+
+            </div>
+        </div>
+    </main>
 </body>
 </html>
