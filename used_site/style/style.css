@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+body {
+    background: #fafafa;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_inner {
+    width: 1200px;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 0 40px #ddd;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.gnb {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gnb > ul {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.gnb > ul > li {
+    width: 120px;
+    height: 100%;
+    text-align: center;
+    line-height: 36px;
+}
+.account {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.account > a {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account > a > button {
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    color: #111;
+    border: none;
+}
+.account > a > button:hover {
+    color: #399fff;
+    cursor: pointer;
+}
