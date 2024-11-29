@@ -29,7 +29,27 @@
     <main>
         <div class="item_container">
             <div class="item_inner">
-
+                <div class="item_box">
+                    <div class="img_box">
+                        <img src="images/image.png" alt="">
+                    </div>
+                    <div class="item_content">
+                        <div class="item_title">
+                            <h2>맨유 베컴 98-99</h2>
+                        </div>
+                        <div class="item_price">
+                            900,000 <span>원</span>
+                        </div>
+                        <button class="item_show">자세히 보기</button>
+                    </div>
+                </div>
+                <div class="item_box"></div>
+                <div class="item_box"></div>
+                <div class="item_box"></div>
+                <div class="item_box"></div>
+                <div class="item_box"></div>
+                <div class="item_box"></div>
+                <div class="item_box"></div>
             </div>
         </div>
     </main>
