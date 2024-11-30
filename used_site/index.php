@@ -11,9 +11,10 @@
         <div class="header_inner">
             <nav class="gnb">
                 <ul>
-                    <li>매물 보기</li>
-                    <li>시세 조회</li>
-                    <li>찜한 상품</li>
+                    <li><a href="#">매물 보기</a></li>
+                    <li><a href="#">매물 등록</a></li>
+                    <li><a href="#">시세 조회</a></li>
+                    <li><a href="#">찜한 상품</a></li>
                 </ul>
             </nav>
             <div class="account">
@@ -26,6 +27,7 @@
             </div>
         </div>
     </header>
+
     <main>
         <div class="item_container">
             <div class="item_inner">
@@ -35,15 +37,13 @@
                     </div>
                     <div class="item_content">
                         <div class="item_title">
-                            <h2>맨유 베컴 98-99</h2>
+                            <h3>맨유 베컴 98-99</h3>
                         </div>
                         <div class="item_price">
                             900,000 <span>원</span>
                         </div>
-                        <button class="item_show">자세히 보기</button>
                     </div>
                 </div>
-                <div class="item_box"></div>
                 <div class="item_box"></div>
                 <div class="item_box"></div>
                 <div class="item_box"></div>
