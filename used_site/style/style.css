@@ -133,7 +133,8 @@ main {
 }
 
 /* login.php */
-.login_container {
+.login_container,
+.join_container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -141,7 +142,8 @@ main {
     align-items: center;
     flex-direction: column;
 }
-.login_container > p {
+.login_container > p,
+.join_container > p {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 20px;
@@ -194,7 +196,8 @@ main {
 .login_box > form > .info_inputBox > p > span > a:hover {
     text-decoration: underline;
 }
-.login_btn {
+.login_btn,
+.join_btn {
     width: 100%;
     height: 50px;
     background: #399fff;
@@ -202,7 +205,42 @@ main {
     color: #fff;
     border-radius: 15px;
 }
-.login_btn:hover {
+.login_btn:hover,
+.join_btn:hover {
     background: #0084ff;
     cursor: pointer;
+}
+
+/* join.php */
+.join_box {
+    width: 400px;
+    height: 450px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.join_box > form {
+    width: 80%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.join_box > form > .join_info {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+}
+.join_box > form > .join_info > input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ddd;
+    outline-color: #399fff;
+    padding-left: 15px;
+    border-radius: 15px;
 }
