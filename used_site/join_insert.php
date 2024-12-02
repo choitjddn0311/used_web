@@ -1,10 +1,10 @@
 <?php
-    $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
-
-    $name = $_POST['name'];
-    $id = $_POST['id'];
-    $pw = $_POST['password'];
-    $rpw = $_POST['repassword'];
+        $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
+        $name = mysqli_real_escape_string($conn, $_POST['name']);
+        $id = mysqli_real_escape_string($conn, $_POST['id']);
+        $pw = mysqli_real_escape_string($conn, $_POST['password']);
+        $rpw = mysqli_real_escape_string($conn , $_POST['repassword']);
+        $sql = "INSERT INTO user_info(name,id,pw) VALUES ('$name' , '$id' , '$pw')";
 
     if($pw !== $rpw) {
         echo "<script>
@@ -14,9 +14,7 @@
         exit;
     };
 
-    $hash_pw = password_hash($pw, PASSWORD_DEFAULT);
-
-    $sql = "INSERT INTO user_info(name, id, pw) VALUES ('$name' , '$id' , '$hash_pw')";
+    $sql = "INSERT INTO user_info(name, id, pw) VALUES ('$name' , '$id' , '$pw')";
 
     if(mysqli_query($conn , $sql)) {
         echo "<script>
