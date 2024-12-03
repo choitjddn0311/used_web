@@ -11,7 +11,7 @@
         session_start();
         $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
 
-        $is_logged_in = isset($_SESSION['user_id']);
+        $is_logged_in = isset($_SESSION['user_name']);
     ?>
     <header>
         <div class="header_inner">
@@ -25,7 +25,9 @@
             </nav>
             <div class="account">
                 <?php if ($is_logged_in): ?>
-                    <span><?=htmlspecialchars($_SESSION['user_id'])?>님</span>
+                    <ul>
+                        <li class="user_id"><span><?=htmlspecialchars($_SESSION['user_name'])?></span> 님</li>
+                    </ul>
                     <a href="logout.php">
                         <button>로그아웃</button>
                     </a>

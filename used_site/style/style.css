@@ -80,6 +80,24 @@ header {
     color: #399fff;
     cursor: pointer;
 }
+.account > ul {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_id {
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    align-content: center;
+    font-size: 15px;
+}
+.user_id > span {
+    font-weight: bold;
+    font-size: 16px;
+}
 main {
     width: 100%;
     display: flex;
