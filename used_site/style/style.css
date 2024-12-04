@@ -54,6 +54,10 @@ header {
 .gnb > ul > li:hover {
     color: #399fff;
 }
+.inPage {
+    font-weight: bold;
+    color: #0084ff;
+}
 .account {
     width: 20%;
     height: 100%;
