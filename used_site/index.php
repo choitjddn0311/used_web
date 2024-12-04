@@ -17,10 +17,10 @@
         <div class="header_inner">
             <nav class="gnb">
                 <ul>
-                    <li><a href="#">매물 보기</a></li>
-                    <li><a href="#">매물 등록</a></li>
+                    <li><a href="index.php">홈으로</a></li>
+                    <li><a href="upload.php">매물 등록</a></li>
                     <li><a href="#">시세 조회</a></li>
-                    <li><a href="#">찜한 상품</a></li>
+                    <li><a href="wishlist.php">찜한 매물</a></li>
                 </ul>
             </nav>
             <div class="account">
