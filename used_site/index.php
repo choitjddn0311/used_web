@@ -12,6 +12,8 @@
         $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
 
         $is_logged_in = isset($_SESSION['user_name']);
+        $sql_products = "SELECT * FROM products";
+        $result_products = mysqli_query($conn , $sql_products);
     ?>
     <header>
         <div class="header_inner">
@@ -46,7 +48,21 @@
     <main>
         <div class="item_container">
             <div class="item_inner">
-                <div class="item_box">
+                <?php
+                    if(mysqli_num_rows($result_products) > 0){
+                        while($row = mysqli_fetch_assoc($result_products)){
+                            echo "<div class='item_box'>";
+                            echo "<div class='img_box'><img src='images/image.png' alt=''></div>";
+                            echo "<div class='item_content'>";
+                            echo "<div class='item_title'><h3>" . htmlspecialchars($row['title']) . "</h3></div>";
+                            echo "<div class='item_price'>" . htmlspecialchars($row['price']) .  "<span>원</span></div>";
+                            echo "</div></div>";
+                        }
+                    } else {
+                        echo "<div class='no_item'><h2>등록된 매물이 없습니다.</h2></div>";
+                    }
+                ?>
+                <!-- <div class="item_box">
                     <div class="img_box">
                         <img src="images/image.png" alt="">
                     </div>
@@ -58,13 +74,7 @@
                             900,000 <span>원</span>
                         </div>
                     </div>
-                </div>
-                <div class="item_box"></div>
-                <div class="item_box"></div>
-                <div class="item_box"></div>
-                <div class="item_box"></div>
-                <div class="item_box"></div>
-                <div class="item_box"></div>
+                </div> -->
             </div>
         </div>
     </main>
