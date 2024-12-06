@@ -1,12 +1,12 @@
 <?php
     session_start();
     $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
-    if($_SERVER['REQUEST_METHOD'] == 'post'){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $title = $_POST['title'];
         $content = $_POST['content'];
-        $price = intval($_POST['price']);
+        $price = $_POST['price'];
     }
-    if(empty($title) || empty($content) || empty($content)){
+    if(empty($title) || empty($content) || empty($price)){
         echo "
         <script>
             alert('비어있는 내용을 입력해주세요.');
