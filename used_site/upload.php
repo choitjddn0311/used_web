@@ -42,5 +42,16 @@
             </div>
         </div>
     </header>
+    <main>
+        <form action="upload_insert.php" class="upload_form" method="post">
+            <div class="upload_container">
+                <input type="text" placeholder="상품명을 입력해주세요." name="title">
+                <input type="text" placeholder="상품의 정보를 입력해주세요." name="content">
+                <input type="number" placeholder="가격을 입력해주세요">
+                <p>숫자로만 입력해주세요</p>
+                
+            </div>
+        </form>
+    </main>
 </body>
 </html>

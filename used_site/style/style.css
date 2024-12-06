@@ -107,6 +107,19 @@ main {
     justify-content: center;
     align-items: center;
 }
+.upload_form {
+    width: 1440px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload_container {
+    width: 70%;
+    height: 90%;
+    background: aliceblue;
+}
 .item_container {
     width: 1440px;
     height: 100vh;
