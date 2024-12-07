@@ -9,6 +9,13 @@
 <body>
 <?php
         session_start();
+        if(!isset($_SESSION['user_name'])){
+            echo "
+            <script>
+                alert('로그인 된 사용자만 접근가능합니다.');
+                location.href='index.php';
+            </script>";
+        }
         $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
 
         $is_logged_in = isset($_SESSION['user_name']);
