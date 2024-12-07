@@ -9,13 +9,13 @@
 <body>
 <?php
         session_start();
-        if(!isset($_SESSION['user_name'])){
-            echo "
-            <script>
-                alert('로그인 된 사용자만 접근가능합니다.');
-                location.href='index.php';
-            </script>";
-        }
+        // if(!isset($_SESSION['user_name'])){
+        //     echo "
+        //     <script>
+        //         alert('로그인 된 사용자만 접근가능합니다.');
+        //         location.href='index.php';
+        //     </script>";
+        //}
         $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
 
         $is_logged_in = isset($_SESSION['user_name']);
@@ -50,6 +50,7 @@
         </div>
     </header>
     <main>
+        <?php if(isset($_SESSION['user_name'])): ?>
         <form action="upload_insert.php" class="upload_form" method="post">
             <div class="upload_container">
                 <input type="text" placeholder="상품명을 입력해주세요." name="title">
@@ -61,6 +62,11 @@
                 <input type="submit" value="매물 올리기">
             </div>
         </form>
+        <?php else: ?>
+            <div class="only_user">
+                <h1>로그인한 사용자만 접근할 수 있습니다.</h1>
+            </div>
+        <?php endif; ?>
     </main>
 </body>
 </html>
