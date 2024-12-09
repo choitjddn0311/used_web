@@ -9,16 +9,7 @@
 <body>
 <?php
         session_start();
-        // if(!isset($_SESSION['user_name'])){
-        //     echo "
-        //     <script>
-        //         alert('로그인 된 사용자만 접근가능합니다.');
-        //         location.href='index.php';
-        //     </script>";
-        //}
         $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
-
-        $is_logged_in = isset($_SESSION['user_name']);
     ?>
     <header>
         <div class="header_inner">
@@ -31,7 +22,7 @@
                 </ul>
             </nav>
             <div class="account">
-                <?php if ($is_logged_in): ?>
+                <?php if (isset($_SESSION['user_name'])): ?>
                     <ul>
                         <li class="user_id"><span><?=htmlspecialchars($_SESSION['user_name'])?></span> 님</li>
                     </ul>
@@ -63,8 +54,8 @@
             </div>
         </form>
         <?php else: ?>
-            <div class="only_user">
-                <h1>로그인한 사용자만 접근할 수 있습니다.</h1>
+            <div class="without_login">
+                <h2>로그인한 사용자만 접근할 수 있습니다.</h2>
             </div>
         <?php endif; ?>
     </main>

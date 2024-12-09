@@ -59,7 +59,7 @@
                             echo "</div></div>";
                         }
                     } else {
-                        echo "<div class='no_item'><h2>등록된 매물이 없습니다.</h2></div>";
+                        echo "<div class='without_login'><h2>등록된 매물이 없습니다.</h2></div>";
                     }
                 ?>
                 <!-- <div class="item_box">
