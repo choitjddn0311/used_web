@@ -64,7 +64,7 @@
         </form>
         <?php else: ?>
             <div class="only_user">
-                <h1>로그인한 사용자만 접근할 수 있습니다.</h1>
+                <h2>로그인한 사용자만 접근할 수 있습니다.</h2>
             </div>
         <?php endif; ?>
     </main>

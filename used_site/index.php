@@ -11,22 +11,30 @@
         session_start();
         $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
 
-        $is_logged_in = isset($_SESSION['user_name']);
+        $basic_user = isset($_SESSION['user_name']);
         $sql_products = "SELECT * FROM products";
-        $result_products = mysqli_query($conn , $sql_products);
+        $result_products = mysqli_query($conn , $sql_products); 
     ?>
     <header>
         <div class="header_inner">
             <nav class="gnb">
-                <ul>
-                    <li><a href="index.php">홈으로</a></li>
-                    <li><a href="upload.php">매물 등록</a></li>
-                    <li><a href="#">시세 조회</a></li>
-                    <li><a href="wishlist.php">찜한 매물</a></li>
-                </ul>
+                <?php if($basic_user == 'admin'): ?>
+                    <ul>
+                        <li><a href="index.php">홈으로</a></li>
+                        <li><a href="user_list.php">사용자 리스트</a></li>
+                        <li><a href="product_list.php">매물 리스트</a></li>
+                    </ul>
+                <?php else: ?>
+                    <ul>
+                        <li><a href="index.php">홈으로</a></li>
+                        <li><a href="upload.php">매물 등록</a></li>
+                        <li><a href="#">시세 조회</a></li>
+                        <li><a href="wishlist.php">찜한 매물</a></li>
+                    </ul>
+                <?php endif; ?>
             </nav>
             <div class="account">
-                <?php if ($is_logged_in): ?>
+                <?php if ($basic_user): ?>
                     <ul>
                         <li class="user_id"><span><?=htmlspecialchars($_SESSION['user_name'])?></span> 님</li>
                     </ul>
