@@ -54,7 +54,11 @@
             </div>
         </form>
         <?php else: ?>
+<<<<<<< HEAD
             <div class="without_login">
+=======
+            <div class="only_user">
+>>>>>>> 1b388bd6b11c22d0ac98eaa1248ec86db89c11af
                 <h2>로그인한 사용자만 접근할 수 있습니다.</h2>
             </div>
         <?php endif; ?>
