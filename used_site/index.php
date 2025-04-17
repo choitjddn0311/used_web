@@ -11,7 +11,7 @@
         session_start();
         $conn = mysqli_connect('localhost' , 'root' , '' , 'used_platform');
 
-        $basic_user = isset($_SESSION['user_name']);
+        $basic_user = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : null ;
         $sql_products = "SELECT * FROM products";
         $result_products = mysqli_query($conn , $sql_products); 
     ?>
